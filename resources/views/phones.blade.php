@@ -61,7 +61,12 @@
                 <div class="title m-b-md">
                    Phone List
                 </div>
-                <p>{{ $type }}-{{ $base }}</p>
+               
+                @foreach($phones as $phones)
+                    <div>
+                        {{ $phones ['type'] }} - {{ $phones ['base'] }}
+                    </div>
+                @endforeach
             </div>
         </div>
     </body>
